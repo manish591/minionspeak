@@ -1,9 +1,6 @@
 const inputTextHere = document.querySelector('.inputtext');
 const translateButton = document.querySelector('.translatebutton');
 const output = document.querySelector('.translation');
-const container = document.querySelector('.main');
-const errorimg = document.querySelector('.errorimg');
-const errorMessage = document.querySelector('.errormessage');
 
 //url
 const sourceURL = 'https://api.funtranslations.com/translate/minion.json';
@@ -15,17 +12,19 @@ function getURL (text) {
 }
 
 function error () {
+    console.log('Error with the server!');
     alert('Something went wrong!');
 }
 
 function translateToBanana () {
-    fetch(getURL(inputTextHere.value))
+    let callback = inputTextHere.value;
+    fetch(getURL(callback))
     .then(reply => reply.json())
-    .then(dataFound => {
-        let translatedSentence = dataFound.contents.translated;
+    .then(data => {
+        let translatedSentence = data.contents.translated;
         output.innerHTML = translatedSentence;
     })
-    .catch(error());
+    .catch(error);
 }
 
 translateButton.addEventListener('click', translateToBanana);
