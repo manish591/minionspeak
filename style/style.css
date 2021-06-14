@@ -87,25 +87,6 @@ footer {
     margin-top: 1vh;
 }
 
-.main {
-    padding: 18px 0 6px 0;
-}
-
-.errorimg {
-    width: 80vw;
-    height: 200px;
-    z-index: -1;
-    margin-bottom: -5vh;
-}
-
-.errormessage {
-    margin-top: 2vh;
-    margin-left: 13vw;
-}
-
-.hide {
-    display: none;
-}
 
 @media screen and (min-width: 768px) {
     .container {
@@ -126,12 +107,4 @@ footer {
         padding: 10px 13px;
     }
 
-    .errorimg {
-        width: 38vw;
-        margin: 2vh auto 0 auto;
-    }
-
-    .errormessage {
-       margin-left: 12vw;
-    }
 }

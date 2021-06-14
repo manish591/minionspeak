@@ -15,9 +15,7 @@ function getURL (text) {
 }
 
 function error () {
-    container.style.backgroundColor = 'red';
-    errorimg.classList.remove('hide');
-    errorMessage.classList.remove('hide');
+    alert('Something went wrong!');
 }
 
 function translateToBanana () {
